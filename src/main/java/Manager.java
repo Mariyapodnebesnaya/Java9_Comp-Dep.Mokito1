@@ -1,7 +1,10 @@
 
 public class Manager {
     private String[] films = new String[0];
-    private final int limit;
+    private int limit;
+
+    public Manager(FilmRepository repo) {
+    }
 
     public Manager() {
         limit = 10;
@@ -21,11 +24,6 @@ public class Manager {
         films = tmp;
 
     }
-
-    public String[] findAll() {
-        return films;
-    }
-
     public String[] findLast() {
         int resultLength;
         if (limit < films.length) {
